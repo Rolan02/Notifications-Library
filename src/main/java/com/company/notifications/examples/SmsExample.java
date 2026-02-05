@@ -100,7 +100,7 @@ public class SmsExample {
         System.out.println("Example 2: International SMS");
 
         SmsProviderConfig config = SmsProviderConfig.builder()
-                .accountSid("AC1234567890abcdef1234567890abcdef")
+                .accountSid("TWILIO_ACCOUNT_SID")
                 .authToken("your_auth_token_here")
                 .fromPhoneNumber("+15551234567")
                 .maxPricePerSms(0.15) // Prevent expensive international charges
@@ -135,7 +135,7 @@ public class SmsExample {
         System.out.println("Example 3: Long SMS (Multiple Segments)");
 
         SmsProviderConfig config = SmsProviderConfig.builder()
-                .accountSid("AC1234567890abcdef1234567890abcdef")
+                .accountSid("TWILIO_ACCOUNT_SID")
                 .authToken("your_auth_token_here")
                 .fromPhoneNumber("+15551234567")
                 .build();
@@ -184,7 +184,7 @@ public class SmsExample {
         System.out.println("Example 4: Transactional SMS with Status Callback");
 
         SmsProviderConfig config = SmsProviderConfig.builder()
-                .accountSid("AC1234567890abcdef1234567890abcdef")
+                .accountSid("TWILIO_ACCOUNT_SID")
                 .authToken("your_auth_token_here")
                 .fromPhoneNumber("+15551234567")
                 .requestDeliveryStatus(true)
@@ -222,7 +222,7 @@ public class SmsExample {
         System.out.println("Example 5: Batch SMS Sending");
 
         SmsProviderConfig config = SmsProviderConfig.builder()
-                .accountSid("AC1234567890abcdef1234567890abcdef")
+                .accountSid("TWILIO_ACCOUNT_SID")
                 .authToken("your_auth_token_here")
                 .fromPhoneNumber("+15551234567")
                 .build();
