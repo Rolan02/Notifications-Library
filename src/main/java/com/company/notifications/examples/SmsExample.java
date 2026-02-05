@@ -56,7 +56,7 @@ public class SmsExample {
 
         // Step 1: Configure the provider
         SmsProviderConfig config = SmsProviderConfig.builder()
-                .accountSid("AC1234567890abcdef1234567890abcdef")
+                .accountSid("TWILIO_ACCOUNT_SID")
                 .authToken("your_auth_token_here")
                 .fromPhoneNumber("+15551234567")
                 .useTestCredentials(false)
