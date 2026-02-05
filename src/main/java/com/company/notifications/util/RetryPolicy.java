@@ -145,4 +145,35 @@ public class RetryPolicy {
     public interface RetryableOperation<T> {
         T execute() throws Exception;
     }
+
+    /**
+     * Builder class customization
+     */
+    public static class RetryPolicyBuilder {
+
+        /**
+         * Adds an exception type that should trigger retries
+         */
+        public RetryPolicyBuilder retryOn(Class<? extends Throwable> exceptionClass) {
+            if (this.retryableExceptions == null) {
+                this.retryableExceptions = new HashSet<>();
+            }
+            this.retryableExceptions.add(exceptionClass);
+            return this;
+        }
+
+        /**
+         * Adds multiple exception types that should trigger retries
+         */
+        @SafeVarargs
+        public final RetryPolicyBuilder retryOn(Class<? extends Throwable>... exceptionClasses) {
+            if (this.retryableExceptions == null) {
+                this.retryableExceptions = new HashSet<>();
+            }
+            for (Class<? extends Throwable> exClass : exceptionClasses) {
+                this.retryableExceptions.add(exClass);
+            }
+            return this;
+        }
+    }
 }
